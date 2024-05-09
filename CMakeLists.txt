@@ -26,5 +26,5 @@ include_directories(${raylib_SOURCE_DIR}/src)
 add_executable(${APP_NAME} ${APP_NAME}.cpp)
 add_executable(${APP_NAME}-viz ${APP_NAME}-viz.cpp)
 
-target_link_libraries(${APP_NAME} PRIVATE mlx raylib)
+target_link_libraries(${APP_NAME} PRIVATE mlx)
 target_link_libraries(${APP_NAME}-viz PRIVATE mlx raylib)
