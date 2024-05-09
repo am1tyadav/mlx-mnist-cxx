@@ -10,16 +10,11 @@ tasks:
     desc: List all available tasks
     cmd: task --list-all
 
-  br:
-    desc: Build app and run
-    cmds:
-      - task: build
-      - task: run
-
   build:
-    desc: Build app
+    desc: Build app(s)
     cmds:
       - cmake -B ./cmake-build -S .
+      - cmake --build ./cmake-build --target {{ .filename }}
       - cmake --build ./cmake-build --target {{ .filename }}-viz
 
   download:
@@ -36,4 +31,8 @@ tasks:
 
   run:
     desc: Run app
+    cmd: ./cmake-build/{{ .filename }}
+
+  run:viz:
+    desc: Run viz app
     cmd: ./cmake-build/{{ .filename }}-viz

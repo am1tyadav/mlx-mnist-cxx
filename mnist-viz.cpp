@@ -8,10 +8,10 @@ Load MNIST data and display random examples
 #include "dataset.h"
 #include "raylib.h"
 
-#define WINDOW_W    448
-#define WINDOW_H    484
-#define TARGET_FPS  60
-#define PIXEL_SIZE  16
+#define WINDOW_W        448
+#define WINDOW_H        484
+#define TARGET_FPS      60
+#define PIXEL_SIZE      16
 
 typedef struct {
     size_t index;
